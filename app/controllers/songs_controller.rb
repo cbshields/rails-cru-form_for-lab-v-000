@@ -6,7 +6,7 @@ class SongsController < ApplicationController
 
   def show
     @song = Song.find(params[:id])
-    break
+    byebug
     @artist = Artist.find(@song.artist_id)
     @genre = Genre.find(@song.genre_id)
   end
