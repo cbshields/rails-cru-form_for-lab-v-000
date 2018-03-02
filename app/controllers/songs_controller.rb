@@ -22,7 +22,7 @@ class SongsController < ApplicationController
   end
 
   def update
-    @song = Song.update(params.require(:song).permit(:name, :artist_id, :genre_id))
+    @song = Song.update(params.require(:song).permit(:name))
     redirect_to song_path(@song)
   end
 end #ends SongsController
